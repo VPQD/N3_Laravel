@@ -49,9 +49,9 @@
                                 @php
                                     $roleFound = false;
                                 @endphp
-                                @foreach ($permission as $permission)
-                                    @if ($permission->id == $user->usertype)
-                                        <td>{{ $permission->role }}</td>
+                                @foreach ($permission as $individualPermission)
+                                    @if ($individualPermission->id == $user->usertype)
+                                        <td>{{ $individualPermission->role }}</td>
                                         @php
                                             $roleFound = true;
                                         @endphp
